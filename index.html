@@ -125,10 +125,17 @@
 
 
 
-    <section class="hero-section d-flex align-items-center">
-        <div class="container">
+    <section class="hero-section d-flex align-items-center position-relative overflow-hidden">
+
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/Hero video 1.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="container position-relative">
             <div class="row">
-                <div>
+                <div class="col-lg-9 col-md-10 col-sm-12">
 
                     <h1 class="hero-title">
                         Caring Pediatric Experts for<br>
@@ -144,7 +151,6 @@
                         <a href="#" class="btn btn-primary hero-btn-primary">
                             About Just 4 Kids
                         </a>
-
                         <a href="#" class="btn btn-outline-light hero-btn-outline">
                             Contact Now
                         </a>
@@ -153,7 +159,10 @@
                 </div>
             </div>
         </div>
+
     </section>
+
+
 
 
 
