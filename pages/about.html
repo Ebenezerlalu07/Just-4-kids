@@ -139,4 +139,55 @@
 
 </body>
 
+<!-- Website Loader -->
+<div id="site-loader" style="
+    position:fixed;
+    inset:0;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+">
+
+    <img src="/assets/Logo.png" alt="Loading" style="width:120px; animation: heartBeat 3s infinite ease-in-out;">
+
+    <style>
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+
+            20% {
+                transform: scale(1.08);
+            }
+
+            40% {
+                transform: scale(1);
+            }
+
+            60% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("site-loader");
+            loader.style.opacity = "0";
+            loader.style.transition = "opacity 0.5s ease";
+
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 500);
+        });
+    </script>
+
+
+
 </html>

@@ -19,6 +19,53 @@ body {
     padding: 0;
 }
 
+
+/* ===== Base Fade Animation ===== */
+.fade-anim {
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+/* ===== Fade In From Left ===== */
+.fade-left {
+    animation-name: fadeLeft;
+}
+
+/* ===== Fade In From Right ===== */
+.fade-right {
+    animation-name: fadeRight;
+}
+
+
+
+/* ===== Keyframes ===== */
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 /* ================= TOP HEADER (POPPINS) ================= */
 .top-header {
     padding: 20px 0;
@@ -163,7 +210,7 @@ body {
 
 /* ================= HERO SECTION ================= */
 .hero-section {
-    min-height: 80vh;
+    min-height: 90vh;
     position: relative;
     color: #ffffff;
 }
@@ -186,7 +233,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.30);
     z-index: 1;
 }
 
@@ -284,5 +331,5 @@ body {
         /* smaller text */
     }
 
-    
+
 }
