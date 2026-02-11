@@ -241,11 +241,11 @@ body {
 @media (max-width: 575px) {
     .hero-title {
         font-size: 26px;
-
     }
-}
 
-@media (max-width: 575px) {
+    .hero-title {
+        margin-bottom: 8px;
+    }
 
     .hero-btn-primary,
     .hero-btn-outline {
@@ -255,3 +255,4 @@ body {
         /* smaller text */
     }
 }
+
