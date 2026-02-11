@@ -146,20 +146,14 @@ body {
 
     /* Reduce font size */
     .main-nav .nav-link {
-        font-size: 12px;
+        font-size: 10px;
 
 
     }
 
-@media (max-width: 991px) {
     .main-nav .nav-link.active {
-        color: inherit;
-        font-weight: 500;
-        pointer-events: none;
-        cursor: default;
-    }
-}
 
+    }
 }
 
 
