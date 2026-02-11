@@ -146,14 +146,12 @@ body {
 
     /* Reduce font size */
     .main-nav .nav-link {
-        font-size: 10px;
+        font-size: 11px;
 
 
     }
 
-    .main-nav .nav-link.active {
 
-    }
 }
 
 
