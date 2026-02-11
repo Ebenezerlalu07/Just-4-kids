@@ -101,8 +101,7 @@ body {
         font-size: 14px;
     }
 
-    .hours-box,
-    .phone-box {
+    .hours-box {
         display: none !important;
     }
 
@@ -131,6 +130,10 @@ body {
         display: none;
     }
 
+    .social-text {
+        display: none;
+    }
+
     /* Force menu always visible */
     .navbar-collapse {
         display: flex !important;
@@ -147,7 +150,6 @@ body {
     /* Reduce font size */
     .main-nav .nav-link {
         font-size: 11px;
-
 
     }
 
@@ -253,4 +255,3 @@ body {
         /* smaller text */
     }
 }
-
