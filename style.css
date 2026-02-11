@@ -151,9 +151,15 @@ body {
 
     }
 
+@media (max-width: 991px) {
     .main-nav .nav-link.active {
-        display: none;
+        color: inherit;
+        font-weight: 500;
+        pointer-events: none;
+        cursor: default;
     }
+}
+
 }
 
 
