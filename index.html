@@ -20,6 +20,26 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animatedElements = document.querySelectorAll(".fade-anim");
+
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("active");
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                },
+                { threshold: 0.3 }
+            );
+
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
     <div class="Navbar sticky-top bg-white shadow-sm">
         <div class="top-header">
             <div class="container">
@@ -319,6 +339,116 @@
         </div>
     </section>
 
+
+
+    <section class="policy-section py-3">
+        <div class="container">
+            <div class="row align-items-start">
+
+                <!-- LEFT CONTENT (8) -->
+                <div class="col-lg-8 fade-anim fade-left">
+
+                    <h2 class="policy-title mb-3">
+                        Child Safety always comes first <span>(Our Policies)</span>
+                    </h2>
+
+                    <p class="hero-text  mb-5">
+                        It really helps us better facilitate your appointment if you complete all required
+                        forms prior to arrival. Please carefully complete our medical forms and provide a
+                        complete medical history for your child. You can download, print and bring the
+                        required forms with you.
+                    </p>
+
+                    <!-- Timeline -->
+                    <div class="timeline hero-text">
+
+                        <!-- 1 -->
+                        <div class="timeline-item d-flex">
+                            <div class="timeline-left">
+                                <div class="circle-outer">
+                                    <div class="circle-inner">1</div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold">Appointments</h5>
+                                <p class="hero-text">
+                                    Patient visits to Just 4 Kids Pediatric Clinic are by appointment; we accept
+                                    walk-ins depending on the patient’s schedule. For scheduling purposes, every
+                                    sibling will need an appointment to be seen by the provider. Appointments
+                                    must be confirmed within 24 hours.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="timeline-item d-flex">
+                            <div class="timeline-left">
+                                <div class="circle-outer">
+                                    <div class="circle-inner">2</div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold">Cancelation policy</h5>
+                                <p>
+                                    All cancelation/rescheduling appointments should be made 24 hours in advance.
+                                    Late arrival policy: Patients arriving more than 15 minutes late may be asked
+                                    to reschedule their appointment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="timeline-item d-flex">
+                            <div class="timeline-left">
+                                <div class="circle-outer">
+                                    <div class="circle-inner">3</div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold">No-show Policy</h5>
+                                <p>
+                                    If you do not call to notify us of either cancellation or tardiness, you will
+                                    be considered a no-show. If you have three no-shows, you may be discharged
+                                    from our clinic.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="timeline-item d-flex">
+                            <div class="timeline-left">
+                                <div class="circle-outer">
+                                    <div class="circle-inner">4</div>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold">Parental Consent for Care Policy</h5>
+                                <p>
+                                    All adults involved in the care of the child are encouraged to be part of
+                                    office visits. However, any adult, NOT the child’s parent, must have written
+                                    permission from the parent to bring the child in for medical care. Please
+                                    message us through the patient portal permitting the person to seek medical
+                                    treatment and provide consent for treatment.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT IMAGE (4) -->
+                <div class="col-lg-4  mt-lg-0 fade-anim fade-right">
+                    <div class="policy-image">
+                        <img src="/assets/Home policy.jpg" alt="Mother with baby" class="img-fluid">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
 
