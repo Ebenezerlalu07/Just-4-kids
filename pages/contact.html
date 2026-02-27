@@ -21,14 +21,7 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "d12yWU7ZrnwQh0IFx",
-            });
-        })();
-    </script>
-    <script src="script.js" ></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -235,7 +228,7 @@
                                 required></textarea>
                         </div>
 
-                        <button type="submit" onclick="sendmail()" class="btn btn-orange w-100 rounded-0 py-2">
+                        <button type="submit" class="btn btn-orange w-100 rounded-0 py-2">
                             Submit
                         </button>
 
@@ -248,24 +241,93 @@
     </section>
 
 
+    <!-- Bottom Center Toast -->
+    <div class="toast-wrapper">
+        <div id="formToast" class="custom-toast">
+            <div class="toast-body-custom">
+                <div class="toast-icon" id="toastIcon">✔</div>
+                <div class="toast-content">
+                    <strong id="toastTitle">Success</strong>
+                    <div id="toastMessage" class="small">
+                        Your message has been sent successfully!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         (function () {
-            emailjs.init("d12yWU7ZrnwQh0IFx"); // Replace with your EmailJS public key
+            emailjs.init("d12yWU7ZrnwQh0IFx");
         })();
 
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
+        document.addEventListener("DOMContentLoaded", function () {
 
-            emailjs.sendForm("service_hbxk5jz", "template_p1ya872", this)
-                .then(function () {
-                    alert("Message sent successfully!");
-                    document.getElementById("contactForm").reset();
-                }, function (error) {
-                    alert("Failed to send message.");
-                    console.log(error);
-                });
+            const form = document.getElementById("contactForm");
+            const toast = document.getElementById("formToast");
+            const toastTitle = document.getElementById("toastTitle");
+            const toastMessage = document.getElementById("toastMessage");
+            const toastIcon = document.getElementById("toastIcon");
+
+            let toastTimeout;
+
+            function showToast(type, title, message, icon) {
+
+                toast.classList.remove("error");
+                if (type === "error") {
+                    toast.classList.add("error");
+                }
+
+                toastTitle.innerText = title;
+                toastMessage.innerText = message;
+                toastIcon.innerHTML = icon;
+
+                toast.classList.add("show");
+
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 4000);
+            }
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const submitBtn = form.querySelector("button[type='submit']");
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Sending...";
+
+                emailjs.sendForm("service_just4kids", "template_just4kids", this)
+                    .then(function () {
+
+                        showToast(
+                            "success",
+                            "Message Sent",
+                            "Your message has been sent successfully!",
+                            "✔"
+                        );
+
+                        form.reset();
+                    })
+                    .catch(function (error) {
+
+                        showToast(
+                            "error",
+                            "Submission Failed",
+                            "Something went wrong. Please try again.",
+                            "✖"
+                        );
+
+                        console.log(error);
+                    })
+                    .finally(function () {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = "Submit";
+                    });
+            });
         });
     </script>
+
 
 
 
