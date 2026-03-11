@@ -8,6 +8,7 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <title>Just 4 Kids</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,6 +18,10 @@
     <link rel="icon" type="image/x-icon" href="/assets/Logo.png">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -124,7 +129,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/pages/policy.html">Policy</a>
+                                <a class="nav-link " href="/pages/policy.html">Policy</a>
                             </li>
 
                             <li class="nav-item">
@@ -132,15 +137,15 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link  active" href="/pages/insurance.html">Insurance</a>
+                                <a class="nav-link" href="/pages/insurance.html">Insurance</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/pages/gallery.html">Gallery</a>
+                                <a class="nav-link active" href="/pages/insurance.html">Gallery</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/pages/contact.html">Contact</a>
+                                <a class="nav-link " href="/pages/contact.html">Contact</a>
                             </li>
 
                         </ul>
@@ -156,225 +161,76 @@
 
     <!-- About Banner Section -->
     <section class="about-banner d-flex align-items-center justify-content-center text-center"
-        style="background: url('/assets/Insurance\ hero.jpg') center center / cover no-repeat; height: 350px;">
+        style="background: url('/assets/Gallery.jpg') center center / cover no-repeat; height: 350px;">
 
         <div class="container">
-            <h1 class="text-white fw-semibold">Insurance</h1>
+            <h1 class="text-white fw-semibold">Gallery</h1>
         </div>
 
     </section>
 
 
 
-    <section class="insurance-section py-5">
+
+
+
+
+    <!-- Gallery Section -->
+    <section class="py-5 bg-light">
         <div class="container">
-            <div class="row fade-up">
 
-                <!-- LEFT -->
-                <div class="col-lg-6">
-                    <ul class="insurance-list">
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text ">MEDICAID STAR</span>
-                        </li>
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Gallery</h2>
+                <p class="text">Explore moments and activities from our events and community.</p>
+            </div>
 
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">TEXAS CHILDREN'S STAR AND CHIP</span>
-                        </li>
+            <!-- Gallery Grid -->
+            <div class="row g-4">
 
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">AMERIGROUP STAR AND CHIP</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">COMMUNITY HEALTH CHOICE STAR AND CHIP</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">UNITED HEALTH CARE STAR</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">SUPERIOR STAR AND FOSTER CARE</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">AMBETTER</span>
-                        </li>
-
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">BLUE CROSS BLUE SHIELD;PPO</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">MULTIPLAN</span>
-                        </li>
-                    </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="/assets/Door.jpg" class="gallery-img" alt="Gallery Image">
+                    </div>
                 </div>
 
-                <!-- RIGHT -->
-                <div class="col-lg-6 border-start ps-lg-5">
-                    <ul class="insurance-list">
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">CIGNA; PPO</span>
-                        </li>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="/assets/Group Home.jpg" class="gallery-img" alt="Gallery Image">
+                    </div>
+                </div>
 
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="/assets/interior.jpg" class="gallery-img" alt="Gallery Image">
+                    </div>
+                </div>
 
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="/assets/Frames.jpg" class="gallery-img" alt="Gallery Image">
+                    </div>
+                </div>
 
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">AETNA:PPO</span>
-                        </li>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="/assets/abt banner.jpg" class="gallery-img" alt="Gallery Image">
+                    </div>
+                </div>
 
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">UNITED HEALTHCARE:PPO</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">PHCS</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">BOONE CHAPMAN</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">BENEFIT ADMINISTRATIVE SYSTEMS</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">ALLEGIANCE</span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">MERITAIN HEALTH INSURANCE </span>
-                        </li>
-
-                        <li>
-                            <div class="icon-wrapper">
-                                <div class="icon-circle">
-                                    <i data-lucide="arrow-right" class="icon-arrow-right"></i>
-                                </div>
-                            </div>
-                            <span class="insurance-text">UMR</span>
-                        </li>
-                    </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="/assets/contact hero nurse.jpg" class="gallery-img" alt="Gallery Image">
+                    </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
 
-    <!-- insurance Section -->
-    <section class="insurance-hero d-flex align-items-center fade-anim fade-left">
-        <div class="container">
-            <div class="row">
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-6 col-md-8 text-white">
-                    <h1 class="fw-semibold mb-3">
-                        We accept trusted Health <br>
-                        Plans for easy family care.
-                    </h1>
 
-                    <p class="mb-4">
-                        We partner with leading health plans to make quality <br>
-                        care affordable and stress-free for your family.
-                    </p>
-
-                    <a href="/pages/contact.html" class="btn btn-light px-4 py-2 rounded-0">
-                        Contact Us
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
@@ -391,6 +247,22 @@
         .fade-up.show {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
         }
     </style>
 
@@ -497,11 +369,15 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("d12yWU7ZrnwQh0IFx"); // Replace with your Public Key
+        })();
+    </script>
 
 </body>
 

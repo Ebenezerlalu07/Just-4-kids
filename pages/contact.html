@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
+    <title>Just 4 Kids</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link
@@ -87,7 +87,7 @@
                                 <i class="bi bi-calendar"></i>
                             </span>
                             Office Hours<br>
-                            8:00 AM – 5:00 PM
+                            9:00 AM – 5:00 PM
                         </div>
 
                         <!-- Phone -->
@@ -141,6 +141,10 @@
                             </li>
 
                             <li class="nav-item">
+                                <a class="nav-link" href="/pages/gallery.html">Gallery</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link active" href="/pages/contact.html">Contact</a>
                             </li>
 
@@ -191,8 +195,8 @@
                     <div class="d-flex align-items-start mb-4">
                         <img src="/assets/address.png" alt="Address" class="contact-icon me-3">
                         <span>
-                            2503 S. Main Street<br>
-                            Stafford, TX 77477
+                            2503 South Main Street,<br>
+                            Suite C, Stafford,<br>TX 77477
                         </span>
                     </div>
 
@@ -208,7 +212,6 @@
                 <!-- RIGHT FORM -->
                 <div class="col-lg-7">
                     <form id="contactForm">
-
                         <div class="mb-3">
                             <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required>
                         </div>
@@ -231,102 +234,39 @@
                         <button type="submit" class="btn btn-orange w-100 rounded-0 py-2">
                             Submit
                         </button>
-
                     </form>
                 </div>
-
 
             </div>
         </div>
     </section>
 
 
-    <!-- Bottom Center Toast -->
-    <div class="toast-wrapper">
-        <div id="formToast" class="custom-toast">
-            <div class="toast-body-custom">
-                <div class="toast-icon" id="toastIcon">✔</div>
-                <div class="toast-content">
-                    <strong id="toastTitle">Success</strong>
-                    <div id="toastMessage" class="small">
-                        Your message has been sent successfully!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
-        (function () {
-            emailjs.init("d12yWU7ZrnwQh0IFx");
-        })();
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-        document.addEventListener("DOMContentLoaded", function () {
+            let name = document.querySelector('input[name="name"]').value;
+            let email = document.querySelector('input[name="email"]').value;
+            let subject = document.querySelector('input[name="subject"]').value;
+            let message = document.querySelector('textarea[name="message"]').value;
 
-            const form = document.getElementById("contactForm");
-            const toast = document.getElementById("formToast");
-            const toastTitle = document.getElementById("toastTitle");
-            const toastMessage = document.getElementById("toastMessage");
-            const toastIcon = document.getElementById("toastIcon");
+            let body =
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n\n" +
+                "Message:\n" + message;
 
-            let toastTimeout;
+            let gmailURL =
+                "https://mail.google.com/mail/?view=cm&fs=1" +
+                "&to=office@just4kidspedi.com" +
+                "&su=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
 
-            function showToast(type, title, message, icon) {
-
-                toast.classList.remove("error");
-                if (type === "error") {
-                    toast.classList.add("error");
-                }
-
-                toastTitle.innerText = title;
-                toastMessage.innerText = message;
-                toastIcon.innerHTML = icon;
-
-                toast.classList.add("show");
-
-                clearTimeout(toastTimeout);
-                toastTimeout = setTimeout(() => {
-                    toast.classList.remove("show");
-                }, 4000);
-            }
-
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                const submitBtn = form.querySelector("button[type='submit']");
-                submitBtn.disabled = true;
-                submitBtn.innerText = "Sending...";
-
-                emailjs.sendForm("service_just4kids", "template_just4kids", this)
-                    .then(function () {
-
-                        showToast(
-                            "success",
-                            "Message Sent",
-                            "Your message has been sent successfully!",
-                            "✔"
-                        );
-
-                        form.reset();
-                    })
-                    .catch(function (error) {
-
-                        showToast(
-                            "error",
-                            "Submission Failed",
-                            "Something went wrong. Please try again.",
-                            "✖"
-                        );
-
-                        console.log(error);
-                    })
-                    .finally(function () {
-                        submitBtn.disabled = false;
-                        submitBtn.innerText = "Submit";
-                    });
-            });
+            window.open(gmailURL, "_blank");
         });
     </script>
+
 
 
 
