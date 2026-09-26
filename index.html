@@ -1,375 +1,447 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
     <!-- Bootstrap -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Just 4 Kids</title>
+
+    <title>Pediatric Clinic in Stafford & Missouri City, TX | Just 4 Kids Pediatrics</title>
+    <meta name="description"
+        content="Just 4 Kids Pediatric Clinic provides pediatric care for newborns, children and adolescents in Stafford and Missouri City, TX. Same-day and next-day appointments may be available. Call 281-261-5800 to schedule.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Just 4 Kids Pediatric Clinic | Stafford & Missouri City, TX">
+    <meta property="og:description"
+        content="Compassionate pediatric care for growing families. Call 281-261-5800 to schedule your child's appointment.">
+
     <!-- Google Font -->
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
         rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="/assets/Logo.png">
+
     <!-- Custom CSS -->
+
     <link rel="stylesheet" href="/style.css">
+
 </head>
 
+
+
 <body>
+
     <script>
+
         document.addEventListener("DOMContentLoaded", () => {
+
             const animatedElements = document.querySelectorAll(".fade-anim");
 
+
+
             const observer = new IntersectionObserver(
+
                 entries => {
+
                     entries.forEach(entry => {
+
                         if (entry.isIntersecting) {
+
                             entry.target.classList.add("active");
+
                             observer.unobserve(entry.target); // animate once
+
                         }
+
                     });
+
                 },
+
                 { threshold: 0.3 }
+
             );
 
+
+
             animatedElements.forEach(el => observer.observe(el));
+
         });
+
     </script>
+
     <!-- NAVBAR Section -->
+
     <div class="Navbar sticky-top bg-white shadow-sm">
+
         <div class="top-header">
+
             <div class="container">
+
                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
 
+
+
                     <!-- Logo -->
+
                     <div>
+
                         <a href="/index.html">
+
                             <img src="/assets/Logo.png" alt="Just 4 Kids Pediatrics" class="logo">
+
                         </a>
+
                     </div>
 
+
+
                     <!-- Info Boxes -->
+
                     <div class="d-flex gap-2 flex-wrap">
 
+
+
                         <div class="info-box social-box">
+
                             <span class="social-text">Social Media</span>
+
+
 
                             <a href="https://www.facebook.com/just4kidspediclinic/" target="_blank"
                                 aria-label="Facebook" style="color:inherit; text-decoration:none;">
+
                                 <span class="icon-box">
+
                                     <i class="bi bi-facebook"></i>
+
                                 </span>
+
                             </a>
+
+
 
                             <a href="https://x.com/" target="_blank" aria-label="X (Twitter)"
                                 style="color:inherit; text-decoration:none;">
+
                                 <span class="icon-box">
+
                                     <i class="bi bi-twitter-x"></i>
+
                                 </span>
+
                             </a>
+
                         </div>
+
+
+
 
 
                         <!-- Office Hours -->
+
                         <div class="info-box hours-box">
+
                             <span class="icon-box light">
+
                                 <i class="bi bi-calendar"></i>
+
                             </span>
+
                             Office Hours<br>
+
                             9:00 AM – 5:00 PM
+
                         </div>
 
+
+
                         <!-- Phone -->
+
                         <a href="tel:2812615800" aria-label="Call us" class="info-box phone-box phone-white"
                             style="text-decoration:none;">
+
                             <span class="icon-box light">
+
                                 <i class="bi bi-telephone"></i>
+
                             </span>
-                            <span class="social-text">
+
+                            <span">
+
+                                Call to Book<br>
+
                                 281-261-5800</span>
+
                         </a>
 
 
+
+
+
                     </div>
 
+
+
                 </div>
+
             </div>
+
         </div>
+
+
+
 
 
         <div class="nav-wrapper ">
+
             <div class="container">
+
                 <nav class="navbar navbar-expand-lg p-0">
+
+
 
                     <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse"
                         data-bs-target="#mainNav">
+
                         <span class="navbar-toggler-icon"></span>
+
                     </button>
 
+
+
                     <div class="collapse navbar-collapse" id="mainNav">
+
                         <ul class="navbar-nav gap-4 main-nav">
 
+
+
                             <li class="nav-item">
+
                                 <a class="nav-link active" href="/index.html">Home</a>
+
                             </li>
 
+
+
                             <li class="nav-item">
+
                                 <a class="nav-link" href="/pages/about.html">About</a>
+
                             </li>
 
+
+
                             <li class="nav-item">
+
                                 <a class="nav-link" href="/pages/policy.html">Policy</a>
+
                             </li>
 
+
+
                             <li class="nav-item">
+
                                 <a class="nav-link" href="/pages/service.html">Service</a>
+
                             </li>
 
+
+
                             <li class="nav-item">
+
                                 <a class="nav-link" href="/pages/insurance.html">Insurance</a>
+
                             </li>
+
+
 
                             <!-- <li class="nav-item">
+
                                 <a class="nav-link" href="/pages/gallery.html">Gallery</a>
-                            </li> -->
-<!-- 
-                            <li class="nav-item">
-                                <a class="nav-link" href="/pages/appointment.html">Appointment</a>
+
                             </li> -->
 
+                            <!--&#x20;
+
                             <li class="nav-item">
+
+                                <a class="nav-link" href="/pages/appointment.html">Appointment</a>
+
+                            </li> -->
+
+
+
+                            <li class="nav-item">
+
                                 <a class="nav-link" href="/pages/contact.html">Contact</a>
+
                             </li>
 
+
+
                         </ul>
+
                     </div>
+
                 </nav>
+
             </div>
+
         </div>
+
+
 
     </div>
 
+
+
+
+
+    <!-- Same-Day Appointment Banner -->
+    <section class="appointment-alert">
+        <div class="container">
+            <div class="appointment-alert-inner">
+                <div class="appointment-alert-content">
+                    <div>
+                        <strong>Same-Day &amp; Next-Day Appointments Available</strong>
+                        <span>By Appointment Only — please call before visiting.</span>
+                    </div>
+                </div>
+                <a href="tel:2812615800" class="appointment-alert-btn">
+                    <i class="bi bi-telephone-fill"></i>
+                    Call Now: 281-261-5800
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center position-relative overflow-hidden">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="/assets/Hero video 1.mp4" type="video/mp4">
         </video>
-
         <div class="hero-overlay"></div>
 
         <div class="container position-relative">
             <div class="row">
                 <div class="col-lg-9 col-md-10 col-sm-12">
+                    <div class="hero-location-badge mb-3">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Pediatric Clinic in Stafford &amp; Missouri City, TX
+                    </div>
 
                     <h1 class="hero-title">
                         Caring Pediatric Experts for<br>
-                        Happy Healthy Growing Kids
+                        Happy, Healthy, Growing Kids
                     </h1>
 
                     <p class="hero-text">
-                        Dr. Shainy Varghese is a Pediatric Nurse Practitioner and an Associate Professor
-                        at the University of Houston College of Nursing.
+                        Compassionate pediatric care for newborns, children and adolescents in Stafford and Missouri
+                        City, TX.
+                        Same-day and next-day appointments may be available.
                     </p>
 
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="/pages/about.html" class="btn btn-primary hero-btn-primary">
-                            About Just 4 Kids
-                        </a>
-                        <a href="/pages/contact.html" class="btn btn-outline-light hero-btn-outline">
-                            Contact Now
-                        </a>
+                    <div class="hero-appointment-note">
+                        <i class="bi bi-calendar-check"></i>
+                        <span><strong>By Appointment Only</strong> — call ahead to schedule your child's visit.</span>
                     </div>
 
+                    <div class="d-flex gap-3 flex-wrap mt-4">
+                        <a href="tel:2812615800" class="btn btn-primary hero-btn-primary">
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            Call to Book: 281-261-5800
+                        </a>
+                        <a href="/pages/about.html" class="btn btn-outline-light hero-btn-outline">
+                            About Just 4 Kids
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
 
-
-    <!-- about Section -->
+    <!-- About + Services Section -->
     <section class="py-4">
         <div class="container">
             <div class="row g-4">
-
-                <!-- LEFT CONTENT -->
                 <div class="col-lg-8">
-
-                    <h2 class="fw-normal mb-3">
-                        <strong>Finding Inspiration</strong> in Every Turn
-                    </h2>
-
+                    <h2 class="fw-normal mb-3"><strong>Finding Inspiration</strong> in Every Turn</h2>
                     <p class="hero-text">
-                        Just 4 Kids Pediatric Clinic is a Nurse practitioner-owned and operated clinic founded by Dr.
-                        Shainy Varghese in 2010. With certified nurse practitioners, we provide well-child and sick
-                        visits, in-house labs, and Immunizations; Dr. Varghese envisioned creating nurse-managed clinics
-                        to provide quality health care compassionately. Our mission is to provide quality, accessible,
-                        evidence-based medical care in a family-centered environment. We believe in offering more than
-                        vaccines, prescriptions, physicals, sick visits, and labs. As pediatric primary care providers,
-                        we take responsibility for their health and well-being, placing children at the center.  
+                        Just 4 Kids Pediatric Clinic is a nurse practitioner-owned and operated clinic founded by Dr.
+                        Shainy Varghese in 2010.
+                        With certified nurse practitioners, we provide well-child and sick visits, in-house labs, and
+                        immunizations. Our mission
+                        is to provide quality, accessible, evidence-based medical care in a family-centered environment.
+                        As pediatric primary
+                        care providers, we take responsibility for children's health and well-being, placing children at
+                        the center of care.
                     </p>
-
                     <div class="mt-4">
-                        <img src="/assets/Black.jpeg" alt="Kids" class="img-fluid w-100">
+                        <img src="/assets/Black.jpeg" alt="Children receiving pediatric care" class="img-fluid w-100">
                     </div>
-
                 </div>
 
-                <!-- RIGHT SERVICES -->
                 <div class="col-lg-4 fade-anim fade-right">
-                    <div class="text-white p-4 h-100" style="background-color:#EF5D00;">
-
-                        <h3 class="mb-4">
-                            <span style="border-bottom:2px solid currentColor; padding-bottom:2px;">
-                                Our
-                            </span>
-                            Services
+                    <div class="text-white p-4 h-100 services-card" style="background-color:#EF5D00;">
+                        <h3 class="mb-4"><span
+                                style="border-bottom:2px solid currentColor; padding-bottom:2px;">Our</span> Services
                         </h3>
 
+                        <div class="appointment-only-service">
+                            <span class="appointment-only-icon"><i class="bi bi-calendar2-check"></i></span>
+                            <div>
+                                <strong>By Appointment Only</strong>
+                                <small>Please call before visiting the clinic.</small>
+                            </div>
+                        </div>
 
-                        <ul class="list-unstyled fs-5 m-0">
-
-                            <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Virtual Visits</span>
+                        <ul class="list-unstyled service-list m-0">
+                            <li><i class="bi bi-arrow-right"></i><span>Virtual Visits</span></li>
+                            <li><i class="bi bi-arrow-right"></i><span>Sick Visits</span></li>
+                            <li><i class="bi bi-arrow-right"></i><span>Medical Records &amp; Immunization Records</span>
                             </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Sick Visits</span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Walk-In Visits</span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">
-                                    Medical Records &amp; Immunization Records
-                                </span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Newborn Visits</span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Immunization</span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Referrals</span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">School, Camp & WIC
-                                    Forms</span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Well Child
-                                    Appts / Physicals</span>
-                            </li>
-
-                            <li style="display:flex; align-items:flex-start; gap:10px;">
-                                <svg style="margin-top:4px; flex-shrink:0;" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                                <span style="line-height:1.5;">Prescriptions</span>
-                            </li>
+                            <li><i class="bi bi-arrow-right"></i><span>Newborn Visits</span></li>
+                            <li><i class="bi bi-arrow-right"></i><span>Immunizations</span></li>
+                            <li><i class="bi bi-arrow-right"></i><span>Referrals</span></li>
+                            <li><i class="bi bi-arrow-right"></i><span>School, Camp &amp; WIC Forms</span></li>
+                            <li><i class="bi bi-arrow-right"></i><span>Well Child Appointments / Physicals</span></li>
+                            <li><i class="bi bi-arrow-right"></i><span>Prescriptions</span></li>
                         </ul>
-
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
 
-
     <!-- Policy Section -->
-    <section class="policy-section py-3">
+    <section class="policy-section py-4">
         <div class="container">
-            <div class="row align-items-start">
-
-                <!-- LEFT CONTENT (8) -->
-                <div class="col-lg-8 ">
-
-                    <h2 class="policy-title mb-3">
-                        Child Safety always comes first <span>(Our Policies)</span>
-                    </h2>
-
-                    <p class="hero-text  mb-3">
-                        It really helps us better facilitate your appointment if you complete all required
-                        forms prior to arrival. Please carefully complete our medical forms and provide a
-                        complete medical history for your child. You can download, print and bring the
-                        required forms with you.
+            <div class="row align-items-start g-4">
+                <div class="col-lg-8">
+                    <h2 class="policy-title mb-3">Child Safety always comes first <span>(Our Policies)</span></h2>
+                    <p class="hero-text mb-4">
+                        Complete your child's required intake information before arrival whenever possible.
+                        Mobile-friendly digital forms
+                        help reduce check-in time and allow our team to review important medical information before the
+                        scheduled visit.
                     </p>
 
-                    <!-- Timeline -->
                     <div class="timeline hero-text">
-                        <!-- 1 -->
                         <div class="timeline-item d-flex fade-up">
                             <div class="timeline-left">
                                 <div class="circle-outer">
@@ -379,15 +451,12 @@
                             </div>
                             <div class="timeline-content">
                                 <h5 class="fw-bold">Appointments</h5>
-                                <p class="hero-text">
-                                    Patient visits to Just 4 Kids Pediatric Clinic are by appointment; For scheduling purposes, every
-                                    sibling will need an appointment to be seen by the provider. Appointments
-                                    must be confirmed within 24 hours.
-                                </p>
+                                <p class="hero-text">Patient visits to Just 4 Kids Pediatric Clinic are by appointment.
+                                    For scheduling purposes, every sibling needs an appointment to be seen by the
+                                    provider. Appointments must be confirmed within 24 hours.</p>
                             </div>
                         </div>
 
-                        <!-- 2 -->
                         <div class="timeline-item d-flex fade-up">
                             <div class="timeline-left">
                                 <div class="circle-outer">
@@ -396,17 +465,13 @@
                                 <div class="line"></div>
                             </div>
                             <div class="timeline-content">
-                                <h5 class="fw-bold">Cancellation policy</h5>
-                                <p>
-                                    All cancelation/rescheduling appointments should be made 24 hours in advance.
-                                    Late arrival policy: Patients arriving more than 15 minutes late, do let us know
-                                    ahead of time that you will be late to see the doctor on the same day. Or may be asked
-                                    to reschedule your appointment.
-                                </p>
+                                <h5 class="fw-bold">Cancellation Policy</h5>
+                                <p>All cancellations or rescheduling requests should be made 24 hours in advance. If you
+                                    expect to arrive more than 15 minutes late, please call the office. You may be asked
+                                    to reschedule your appointment.</p>
                             </div>
                         </div>
 
-                        <!-- 3 -->
                         <div class="timeline-item d-flex fade-up">
                             <div class="timeline-left">
                                 <div class="circle-outer">
@@ -416,15 +481,11 @@
                             </div>
                             <div class="timeline-content">
                                 <h5 class="fw-bold">No-show Policy</h5>
-                                <p>
-                                    If you do not call to notify us of either cancellation or tardiness, you will
-                                    be considered a no-show. If you have three no-shows, you may be charged
-                                    25 dollars
-                                </p>
+                                <p>If you do not call to notify us of a cancellation or delay, the appointment may be
+                                    considered a no-show. After three no-shows, a $25 fee may apply.</p>
                             </div>
                         </div>
 
-                        <!-- 4 -->
                         <div class="timeline-item d-flex fade-up">
                             <div class="timeline-left">
                                 <div class="circle-outer">
@@ -433,153 +494,290 @@
                             </div>
                             <div class="timeline-content">
                                 <h5 class="fw-bold">Parental Consent for Care Policy</h5>
-                                <p>
-                                    All adults involved in the care of the child are encouraged to be part of
-                                    office visits. However, any adult, NOT the child’s parent, must have written
-                                    permission from the parent to bring the child in for medical care.
-                                </p>
+                                <p>All adults involved in the care of the child are encouraged to be part of office
+                                    visits. Any adult who is not the child's parent must have written permission from
+                                    the parent to bring the child in for medical care.</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- RIGHT IMAGE (4) -->
-                <div class="col-lg-4  mt-lg-0 fade-anim fade-right">
+                <div class="col-lg-4 mt-lg-0 fade-anim fade-right">
                     <div class="policy-image">
                         <img src="/assets/Home policy.jpg" alt="Mother with baby" class="img-fluid">
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-
-    <!-- insurance Section -->
-    <section class="insurance-hero d-flex align-items-center fade-anim fade-left">
+    <!-- Digital Patient Intake -->
+    <section class="patient-intake-section py-5 fade-anim fade-left">
         <div class="container">
-            <div class="row">
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-6 col-md-8 text-white">
-                    <h1 class="fw-semibold mb-3">
-                        We accept trusted Health <br>
-                        Plans for easy family care.
-                    </h1>
+            <div class="patient-intake-card">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <span class="section-label">SAVE TIME AT CHECK-IN</span>
+                        <h2>Complete Your Child's Forms <strong>Before You Arrive.</strong></h2>
+                        <p>Use a mobile-friendly digital intake or patient portal form before your scheduled appointment
+                            for a faster, easier check-in experience.</p>
 
-                    <p class="mb-4">
-                        We partner with leading health plans to make quality <br>
-                        care affordable and stress-free for your family.
-                    </p>
-
-                    <!-- <a href="/pages/insurance.html" class="btn btn-light px-4 py-2 rounded-0">
-                        Explore our Insurance
-                    </a> -->
-
-                </div>
-            </div>
-        </div>
-    </section> <br>
-
-    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-d712d5c9-339d-4a3b-b365-aee3a9ccab74" data-elfsight-app-lazy></div>
-
-
-    <!-- Contact Section -->
-    <section class="py-5 contact-section fade-anim fade-right">
-        <div class="container">
-            <div class="row g-3 align-items-start">
-
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-5 contact-left">
-                    <h2 class="mb-3">Contact Us</h2>
-                    <p class="mb-4">
-                        We use your information to contact you and discuss your
-                        child’s health needs and our services.
-                    </p>
-
-                    <div class="d-flex align-items-start mb-4">
-                        <img src="/assets/email.png" alt="Email" class="contact-icon me-3">
-                        <a href="mailto:office@just4kidspedi.com" class="contact-link">
-                            office@just4kidspedi.com
+                        <div class="patient-benefits">
+                            <span><i class="bi bi-phone"></i> Mobile Friendly</span>
+                            <span><i class="bi bi-clock"></i> Faster Check-In</span>
+                            <span><i class="bi bi-shield-check"></i> Secure Submission</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <!-- Replace this href with the clinic's secure patient portal / intake form URL -->
+                        <a href="https://your-patient-portal-link.com" class="patient-intake-btn">
+                            Complete Patient Forms <i class="bi bi-arrow-up-right"></i>
                         </a>
                     </div>
-
-                    <div class="d-flex align-items-start mb-4">
-                        <img src="/assets/address.png" alt="Address" class="contact-icon me-3">
-                        <span>
-                            2503 South Main Street,<br>
-                            Suite C, Stafford,<br>TX 77477
-                        </span>
-                    </div>
-
-                    <div class="d-flex align-items-start">
-                        <img src="/assets/mobile.png" alt="Phone" class="contact-icon me-3">
-                        <span>
-                            Tel: 281-261-5800<br>
-                            Fax: 281-261-5885
-                        </span>
-                    </div>
                 </div>
-
-                <!-- RIGHT FORM -->
-                <div class="col-lg-7">
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <input type="email" name="email" class="form-control rounded-0" placeholder="Email"
-                                required>
-                        </div>
-
-                        <div class="mb-3">
-                            <input type="text" name="subject" class="form-control rounded-0" placeholder="Subject"
-                                required>
-                        </div>
-
-                        <div class="mb-4">
-                            <textarea name="message" class="form-control rounded-0" rows="5" placeholder="Message"
-                                required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-orange w-100 rounded-0 py-2">
-                            Submit
-                        </button>
-                    </form>
-                </div>
-
             </div>
         </div>
     </section>
+
+    <!-- Insurance Section -->
+    <section class="insurance-section py-5 fade-anim fade-right">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">INSURANCE &amp; HEALTH PLANS</span>
+                <h2 class="insurance-title">Insurance Plans <strong>We Work With</strong></h2>
+                <p class="insurance-description">
+                    We work with a variety of Medicaid and commercial health plans. Please call our office to confirm
+                    your specific plan and coverage before your appointment.
+                </p>
+            </div>
+
+            <div class="insurance-logo-grid">
+                <div class="insurance-logo-card">
+                    <img src="/assets/insurance/community-health-choice.png" alt="Community Health Choice">
+                </div>
+                <div class="insurance-logo-card">
+                    <img src="/assets/insurance/texas-childrens.png" alt="Texas Children's Health Plan">
+                </div>
+                <div class="insurance-logo-card">
+                    <img src="/assets/insurance/superior-healthplan.png" alt="Superior HealthPlan">
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="insurance-note">Don't see your insurance provider? Call our office to verify coverage.</p>
+                <a href="tel:2812615800" class="insurance-call-btn">
+                    <i class="bi bi-telephone-fill"></i> Verify Insurance: 281-261-5800
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews -->
+    <section class="reviews-section py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-label">PARENT REVIEWS</span>
+                <h2 class="reviews-title">Trusted by Families <strong>in Our Community</strong></h2>
+                <p>See what parents say about their experience with Just 4 Kids Pediatric Clinic.</p>
+            </div>
+
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-d712d5c9-339d-4a3b-b365-aee3a9ccab74" data-elfsight-app-lazy></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="py-5 contact-section fade-anim fade-right">
+
+        <div class="container">
+
+            <div class="row g-3 align-items-start">
+
+
+
+                <!-- LEFT CONTENT -->
+
+                <div class="col-lg-5 contact-left">
+
+                    <h2 class="mb-3">Contact Us</h2>
+
+                    <p class="mb-4">
+
+                        We use your information to contact you and discuss your
+
+                        child’s health needs and our services.
+
+                    </p>
+
+
+
+                    <div class="d-flex align-items-start mb-4">
+
+                        <img src="/assets/email.png" alt="Email" class="contact-icon me-3">
+
+                        <a href="mailto:office@just4kidspedi.com" class="contact-link">
+
+                            office@just4kidspedi.com
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-start mb-4">
+
+                        <img src="/assets/address.png" alt="Address" class="contact-icon me-3">
+
+                        <span>
+
+                            2503 South Main Street,<br>
+
+                            Suite C, Stafford,<br>TX 77477
+
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-start">
+
+                        <img src="/assets/mobile.png" alt="Phone" class="contact-icon me-3">
+
+                        <span>
+
+                            Tel: 281-261-5800<br>
+
+                            Fax: 281-261-5885
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT FORM -->
+
+                <div class="col-lg-7">
+
+                    <form id="contactForm">
+
+                        <div class="mb-3">
+
+                            <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required>
+
+                        </div>
+
+
+
+                        <div class="mb-3">
+
+                            <input type="email" name="email" class="form-control rounded-0" placeholder="Email"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="mb-3">
+
+                            <input type="text" name="subject" class="form-control rounded-0" placeholder="Subject"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="mb-4">
+
+                            <textarea name="message" class="form-control rounded-0" rows="5" placeholder="Message"
+                                required></textarea>
+
+                        </div>
+
+
+
+                        <button type="submit" class="btn btn-orange w-100 rounded-0 py-2">
+
+                            Submit
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
 
 
 
     <script>
+
         document.getElementById("contactForm").addEventListener("submit", function (e) {
+
             e.preventDefault();
 
+
+
             let name = document.querySelector('input[name="name"]').value;
+
             let email = document.querySelector('input[name="email"]').value;
+
             let subject = document.querySelector('input[name="subject"]').value;
+
             let message = document.querySelector('textarea[name="message"]').value;
 
+
+
             let body =
+
                 "Name: " + name + "\n" +
                 "Email: " + email + "\n\n" +
                 "Message:\n" + message;
 
+
+
             let gmailURL =
+
                 "https://mail.google.com/mail/?view=cm&fs=1" +
+
                 "&to=office@just4kidspedi.com" +
+
                 "&su=" + encodeURIComponent(subject) +
+
                 "&body=" + encodeURIComponent(body);
 
+
+
             window.open(gmailURL, "_blank");
+
         });
+
     </script>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -591,165 +789,616 @@
 
     <footer class="footer-main">
 
+
+
         <!-- TOP FOOTER -->
+
         <div class="container py-5">
+
             <div class="row align-items-stretch gy-4">
 
+
+
                 <!-- LEFT CONTENT -->
+
                 <div class="col-lg-5">
+
                     <h3 class="footer-title">
+
                         <strong> Healthy Children Today, Strong and
+
                             Happy Tomorrow Always </strong>
+
                     </h3>
+
                     <span class="mb-0"> <strong> Just 4 Kids </strong> Pediatric Clinic</span>
+
                 </div>
 
+
+
                 <!-- DIVIDER (Desktop only) -->
+
                 <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+
                     <div class="footer-divider"></div>
+
                 </div>
+
+
+
 
 
                 <!-- RIGHT LINKS -->
+
                 <div class="col-lg-6">
+
                     <div class="row">
 
+
+
                         <!-- LINKS COLUMN 1 -->
+
                         <div class="col-6 col-md-4 mb-3">
+
                             <ul class="list-unstyled footer-links">
+
                                 <li><a href="/index.html">Home</a></li>
+
                                 <li><a href="/pages/about.html">About Us</a></li>
+
                                 <!-- <li><a href="/pages/appointment.html">Appointment</a></li> -->
+
                                 <li><a href="/pages/contact.html">Contact Us</a></li>
+
                             </ul>
+
                         </div>
+
+
 
                         <!-- LINKS COLUMN 2 -->
+
                         <div class="col-6 col-md-4 mb-3">
+
                             <ul class="list-unstyled footer-links">
+
                                 <li><a href="/pages/policy.html">Policies</a></li>
+
                                 <li><a href="/pages/service.html">Services</a></li>
+
                                 <li><a href="/pages/insurance.html">Insurance</a></li>
+
                             </ul>
+
                         </div>
+
+
 
                         <!-- SOCIAL -->
+
                         <div class="col-md-4">
+
                             <h6 class="mb-3">Social Media</h6>
+
                             <div class="d-flex gap-3">
+
                                 <a href="https://www.facebook.com/just4kidspediclinic/" class="footer-social">f</a>
+
                                 <a href="#" class="footer-social">X</a>
+
                             </div>
+
                         </div>
 
+
+
                     </div>
+
                 </div>
 
+
+
             </div>
+
         </div>
+
+
 
         <!-- BOTTOM BAR -->
+
         <div class="footer-bottom">
+
             <div class="container">
+
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
                     <span>© 2026 by Just 4 Kids Pediatrics.</span>
+
                     <span class="white">Tel: 281-261-5800</span>
+
                 </div>
+
             </div>
+
         </div>
+
+
 
     </footer>
 
 
 
+
+
+
+
+
     <style>
-        .fade-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
+        /* Homepage enhancements */
+        .appointment-alert {
+            background: #EF5D00;
+            color: #fff;
+            padding: 14px 0;
         }
 
+        .appointment-alert-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .appointment-alert-content {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .appointment-alert-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+        }
+
+        .appointment-alert-content strong {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .appointment-alert-content span {
+            display: block;
+            font-size: 13px;
+            opacity: .9;
+            margin-top: 2px;
+        }
+
+        .appointment-alert-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 20px;
+            background: #fff;
+            color: #EF5D00;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: .3s ease;
+        }
+
+        .appointment-alert-btn:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        .hero-location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, .14);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-appointment-note {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .hero-appointment-note i {
+            color: #ffb47f;
+            font-size: 18px;
+        }
+
+        .appointment-only-service {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, .14);
+            padding: 14px;
+            margin-bottom: 18px;
+        }
+
+        .appointment-only-icon {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: #EF5D00;
+            border-radius: 50%;
+        }
+
+        .appointment-only-service strong {
+            display: block;
+            font-size: 16px;
+        }
+
+        .appointment-only-service small {
+            display: block;
+            font-size: 12px;
+            opacity: .85;
+            margin-top: 2px;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 17px;
+            line-height: 1.45;
+        }
+
+        .service-list li i {
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .patient-intake-card {
+            background: #f5f7fb;
+            padding: 45px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .14em;
+            color: #EF5D00;
+            margin-bottom: 14px;
+        }
+
+        .patient-intake-card h2,
+        .insurance-title,
+        .reviews-title {
+            font-size: clamp(30px, 4vw, 46px);
+            font-weight: 400;
+            line-height: 1.15;
+        }
+
+        .patient-intake-card h2 strong,
+        .insurance-title strong,
+        .reviews-title strong {
+            font-weight: 600;
+        }
+
+        .patient-intake-card p,
+        .insurance-description,
+        .reviews-section p {
+            color: #666;
+        }
+
+        .patient-intake-card p {
+            max-width: 680px;
+        }
+
+        .patient-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .patient-benefits span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .patient-benefits i {
+            color: #EF5D00;
+        }
+
+        .patient-intake-btn,
+        .insurance-call-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 22px;
+            background: #EF5D00;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+
+        .patient-intake-btn:hover,
+        .insurance-call-btn:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        .insurance-section {
+            background: #fafafa;
+        }
+
+        .insurance-description {
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+
+        .insurance-logo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .insurance-logo-card {
+            min-height: 140px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            border: 1px solid #eee;
+            transition: .3s ease;
+        }
+
+        .insurance-logo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+        }
+
+        .insurance-logo-card img {
+            max-width: 170px;
+            max-height: 70px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .insurance-note {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .reviews-section {
+            background: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .appointment-alert-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .appointment-alert-btn {
+                width: 100%;
+            }
+
+            .patient-intake-card {
+                padding: 28px 22px;
+            }
+
+            .patient-intake-btn {
+                width: 100%;
+            }
+
+            .insurance-logo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <style>
+        .fade-up {
+
+            opacity: 0;
+
+            transform: translateY(40px);
+
+            transition: all 0.8s ease;
+
+        }
+
+
+
         .fade-up.show {
+
             opacity: 1;
+
             transform: translateY(0);
+
         }
     </style>
 
 
+
+
+
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
 
+
+
             const observer = new IntersectionObserver((entries) => {
+
                 entries.forEach(entry => {
+
                     if (entry.isIntersecting) {
+
                         entry.target.classList.add("show");
+
                     }
+
                 });
+
             }, {
+
                 threshold: 0.2
+
             });
+
+
 
             document.querySelectorAll(".fade-up").forEach(el => {
+
                 observer.observe(el);
+
             });
 
+
+
         });
+
     </script>
 
+
+
     <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
 
 
 </body>
 
+
+
 <!-- Website Loader -->
+
 <div id="site-loader" style="
+
     position:fixed;
+
     inset:0;
+
     background:#ffffff;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     z-index:9999;
+
 ">
+
+
 
     <img src="/assets/Logo.png" alt="Loading" style="width:120px; animation: heartBeat 3s infinite ease-in-out;">
 
+
+
     <style>
         @keyframes heartBeat {
+
             0% {
+
                 transform: scale(1);
+
             }
+
+
 
             20% {
+
                 transform: scale(1.08);
+
             }
+
+
 
             40% {
+
                 transform: scale(1);
+
             }
+
+
 
             60% {
+
                 transform: scale(1.08);
+
             }
 
+
+
             100% {
+
                 transform: scale(1);
+
             }
+
         }
     </style>
 
+
+
     <script>
+
         window.addEventListener("load", function () {
+
             const loader = document.getElementById("site-loader");
+
             loader.style.opacity = "0";
+
             loader.style.transition = "opacity 0.5s ease";
 
+
+
             setTimeout(() => {
+
                 loader.style.display = "none";
+
             }, 500);
+
         });
+
     </script>
+
+
+
+
 
 
 
