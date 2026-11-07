@@ -539,41 +539,91 @@
         </div>
     </section>
 
+
     <!-- Insurance Section -->
-    <section class="insurance-section py-5 fade-anim fade-right">
+    <section class="insurance-section py-5">
         <div class="container">
-            <div class="text-center mb-5 insurance-heading">
-                <span class="section-label">INSURANCE &amp; HEALTH PLANS</span>
+
+            <div class="text-center mb-5">
+                <span class="section-label">
+                    INSURANCE &amp; HEALTH PLANS
+                </span>
 
                 <h2 class="insurance-title">
                     Insurance Plans <strong>We Work With</strong>
                 </h2>
 
                 <p class="insurance-description">
-                    We work with a variety of Medicaid and commercial health plans.
-                    Please call our office to confirm your specific plan and coverage
-                    before your appointment.
+                    We work with a variety of Medicaid and commercial
+                    health plans. Please call our office to confirm
+                    your specific plan and coverage before your appointment.
                 </p>
             </div>
 
-            <div class="insurance-logo-grid">
-                <div class="insurance-logo-card">
-                    <img src="/assets/Logo.png" alt="Community Health Choice">
+            <!-- Bootstrap Logo Grid -->
+            <div class="row g-3 g-md-4 justify-content-center">
+
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/1.png" alt="Community Health Choice">
+                    </div>
                 </div>
 
-                <div class="insurance-logo-card">
-                    <img src="/assets/Logo.png" alt="Texas Children's Health Plan">
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/2.jpeg" alt="Texas Children's Health Plan">
+                    </div>
                 </div>
 
-                <div class="insurance-logo-card">
-                    <img src="/assets/Logo.png" alt="Superior HealthPlan">
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/3.png" alt="Insurance Provider 3">
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/4.jpeg" alt="Insurance Provider 4">
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/5.png" alt="Insurance Provider 5">
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/6.png" alt="Insurance Provider 6">
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/7.png" alt="Insurance Provider 7">
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/8.png" alt="Insurance Provider 8">
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <div class="provider-logo-card">
+                        <img src="/assets/logos/9.png" alt="Insurance Provider 9">
+                    </div>
                 </div>
 
             </div>
 
-            <div class="text-center mt-4 insurance-bottom">
+            <!-- CTA -->
+            <div class="text-center mt-5">
                 <p class="insurance-note">
-                    Don't see your insurance provider? Call our office to verify coverage.
+                    Don't see your insurance provider?
+                    Call our office to verify coverage.
                 </p>
 
                 <a href="tel:2812615800" class="insurance-call-btn">
@@ -581,145 +631,135 @@
                     Verify Insurance: 281-261-5800
                 </a>
             </div>
+
         </div>
     </section>
 
     <style>
-        .insurance-logo-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 160px);
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .insurance-logo-card {
-            width: 160px;
-            height: 160px;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 22px;
-            border-radius: 14px;
-
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-        }
-
-        .insurance-logo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.17);
-        }
-
-        .insurance-logo-card img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            max-width: 120px;
-            max-height: 120px;
-            object-fit: contain;
-            object-position: center;
-            margin: auto;
+        .insurance-section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            background: #fff;
         }
 
         .insurance-description {
             max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 15px auto;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Logo Card */
+        .provider-logo-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 180px;
+
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            border-radius: 16px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+        }
+
+        .provider-logo-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffbe8a;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Equal Image Area */
+        .provider-logo-card img {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+
+            width: 100%;
+            height: 120px;
+            max-width: 170px;
+
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .insurance-note {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .insurance-call-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #ff7a00;
+            color: #fff;
+            padding: 14px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .insurance-call-btn:hover {
+            background: #e56b00;
+            color: #fff;
         }
 
         /* Tablet */
         @media (max-width: 991px) {
-            .insurance-logo-grid {
-                grid-template-columns: repeat(2, 160px);
-                gap: 20px;
+            .provider-logo-card {
+                height: 160px;
+                padding: 15px;
+            }
+
+            .provider-logo-card img {
+                height: 110px;
+                max-width: 145px;
             }
         }
 
         /* Mobile */
-        @media (max-width: 576px) {
-
-            .insurance-section {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
-            .insurance-heading {
-                margin-bottom: 30px !important;
-            }
-
-            .insurance-title {
-                font-size: 28px;
-                line-height: 1.2;
-            }
-
-            .insurance-description {
-                font-size: 14px;
-                line-height: 1.7;
-                padding: 0 5px;
-            }
-
-            .insurance-logo-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 14px;
-                max-width: 340px;
-            }
-
-            .insurance-logo-card {
-                width: 100%;
-                height: auto;
-                aspect-ratio: 1 / 1;
-                padding: 18px;
+        @media (max-width: 575px) {
+            .provider-logo-card {
+                height: 145px;
+                padding: 12px;
                 border-radius: 12px;
             }
 
-            .insurance-logo-card img {
-                max-width: 100px;
-                max-height: 100px;
+            .provider-logo-card img {
+                height: 95px;
+                max-width: 120px;
             }
 
-            .insurance-bottom {
-                margin-top: 30px !important;
-            }
-
+            .insurance-description,
             .insurance-note {
-                font-size: 14px;
-                line-height: 1.6;
+                font-size: 15px;
             }
 
             .insurance-call-btn {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                gap: 8px;
-
-                width: 100%;
-                max-width: 320px;
-
+                font-size: 14px;
                 padding: 13px 18px;
-                text-align: center;
-                white-space: normal;
             }
         }
 
-        /* Very small phones */
-        @media (max-width: 360px) {
-            .insurance-logo-grid {
-                grid-template-columns: 1fr;
-                max-width: 170px;
+        @media (prefers-reduced-motion: reduce) {
+            .provider-logo-card {
+                transition: none;
             }
 
-            .insurance-title {
-                font-size: 25px;
+            .provider-logo-card:hover {
+                transform: none;
             }
         }
     </style>
+
 
     <!-- Google Reviews -->
     <section class="reviews-section py-5">
